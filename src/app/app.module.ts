@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -17,7 +18,7 @@ import { MenuModule, PanelModule, ChartModule,
               GrowlModule, DragDropModule, GalleriaModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatisticComponent } from './statistic/statistic.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
@@ -31,7 +32,7 @@ import { FielderrorsComponent } from './fielderrors/fielderrors.component';
 
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'alltimes', component: AlltimesComponent },
     { path: 'timesheet', component: TimesheetComponent },

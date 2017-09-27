@@ -4,6 +4,7 @@ import Dexie from 'dexie';
 import { Observable } from "rxjs";
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+
 const MAX_EXAMPLE_RECORDS = 1000;
 
 @Component({
@@ -32,7 +33,8 @@ export class AlltimesComponent implements OnInit {
   constructor(private apollo: Apollo) { }
 
   ngOnInit() {
-        const AllClientsQuery = gql`
+    
+    const AllClientsQuery = gql`
         query allTimesheets {
           allTimesheets {
               id
@@ -46,14 +48,17 @@ export class AlltimesComponent implements OnInit {
 
         const queryObservable = this.apollo.watchQuery({
 
-        query: AllClientsQuery
-      }).subscribe(({ data, loading }: any) => {
-        this.allTimesheetData = data.allTimesheets;
-        this.recordCount = data.allTimesheets.length;
+          query: AllClientsQuery
 
+        }).subscribe(({ data, loading }: any) => {
 
-      });
+          this.allTimesheetData = data.allTimesheets;
+          this.recordCount = data.allTimesheets.length;
 
-      onEditComplete(editInfo) { }
-      
+        });
+
+  }
+
+  onEditComplete(editInfo) { }
+
 }

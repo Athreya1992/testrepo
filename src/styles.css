@@ -59,12 +59,12 @@ body {
         left: -20%;
         opacity: 0.7;
         box-shadow: rgba(0, 0, 0, 0.6) -4px -5px 3px -3px;
-       animation: rotate 1s infinite linear;
+        animation: rotate 1s infinite linear;
 }
 
-+@keyframes rotate {
-  +  0% {
-  +  transform: rotateZ(0deg); }
-  +  100% {
-  +  transform: rotateZ(360deg); } 
+@keyframes rotate {
+    0% {
+    transform: rotateZ(0deg); }
+    100% {
+    transform: rotateZ(360deg); }
 }
